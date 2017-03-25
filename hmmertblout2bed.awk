@@ -1,5 +1,9 @@
-# --tblout <f>    : save parseable table of per-sequence hits to file <s>
-# awk -v chr_name=chrN -v coords=[ali|env] -v th=0.8 -v skipsf=1 -f hmmertblout2bed.awk input-hmmer-tbl.out > output.bed
+# This script is used after HMMER performed alpha satellite HOR analysis
+# Convert HMMER table output to BED format
+# Author: Lev I. Uralsky (Institute of Molecular Genetics, Moscow, Russia)
+#
+# Usage: awk -v chr_name=chrN -v coords=[ali|env] -v th=0.8 -v skipsf=1
+# -f hmmertblout2bed.awk input-hmmer-tbl.out > output.bed
 
 BEGIN {
   OFS = "\t";
@@ -159,9 +163,7 @@ function getColor(s, cnA,    color, i) {
   # here is assigned a color for each type
   color = "";
   for (i in cnA) {
-#    printf("%s\t%s\t", s, i);
     color = (match(s, i) ? cnA[i] : "85,85,85");
-#    printf("%s\n", color);
     if (color != "85,85,85") { break }
   }
   return color;
