@@ -2,6 +2,7 @@
 # awk -v chr_name=chrN -v coords=[ali|env] -v th=0.8 -v skipsf=1 -f hmmertblout2bed.awk input-hmmer-tbl.out > output.bed
 
 BEGIN {
+  OFS = "\t";
   IGNORECASE = 1;
   if (coords == "env") coordsEnv = 1;
   if (th < 0) th = 0;
@@ -139,15 +140,15 @@ BEGIN {
 
   if (coordsEnv) {
     if (strand == "+") {
-      print targetName "\t" envFrom "\t" envTo "\t" queryName "\t" sprintf("%.1f",score) "\t" strand "\t"  envFrom "\t" envTo "\t" getColor(queryName, cnA);
+      print targetName, envFrom, envTo, queryName, sprintf("%.1f",score), strand, envFrom, envTo, getColor(queryName, cnA);
     } else {
-      print targetName "\t" envTo "\t" envFrom "\t" queryName "\t" sprintf("%.1f",score) "\t" strand "\t"  envTo "\t" envFrom "\t" getColor(queryName, cnA);
+      print targetName, envTo, envFrom, queryName, sprintf("%.1f",score), strand, envTo, envFrom, getColor(queryName, cnA);
     }
   } else {
     if (strand == "+") {
-      print targetName "\t" aliFrom "\t" aliTo "\t" queryName "\t" sprintf("%.1f",score) "\t" strand "\t"  aliFrom "\t" aliTo "\t" getColor(queryName, cnA);
+      print targetName, aliFrom, aliTo, queryName, sprintf("%.1f",score), strand, aliFrom, aliTo, getColor(queryName, cnA);
     } else {
-      print targetName "\t" aliTo "\t" aliFrom "\t" queryName "\t" sprintf("%.1f",score) "\t" strand "\t"  aliTo "\t" aliFrom "\t" getColor(queryName, cnA);
+      print targetName, aliTo, aliFrom, queryName, sprintf("%.1f",score), strand, aliTo, aliFrom, getColor(queryName, cnA);
     }
   }
 }
