@@ -9,8 +9,8 @@ BEGIN {
   OFS = "\t";
   IGNORECASE = 1;
   if (coords == "env") coordsEnv = 1;
-  if (th < 0) th = 0;
-  if (th > 1) th = 1;
+  if (+th < 0) th = 0;
+  if (+th > 1) th = 1;
 
   cnA["M1"]                    = "255,255,0";
   cnA["Aa"]                    = "172,172,172";
@@ -136,8 +136,8 @@ BEGIN {
 
 # threshold score to length
   aliLength = abs(aliTo-aliFrom);
-  if (aliLength > 0) {
-    if ((th)&&(score/aliLength) < th) { next }
+  if (+aliLength > 0) {
+    if ((th)&&(sprintf("%.1f",score/aliLength)) < +th) { next }
   } else {
     next
   }
