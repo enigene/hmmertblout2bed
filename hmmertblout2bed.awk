@@ -137,7 +137,7 @@ BEGIN {
 # threshold score to length
   aliLength = abs(aliTo-aliFrom);
   if (+aliLength > 0) {
-    if ((th)&&(sprintf("%.1f",score/aliLength)) < +th) { next }
+    if ((th)&&(sprintf("%.2f",score/aliLength)) < +th) { next }
   } else {
     next
   }
