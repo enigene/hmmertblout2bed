@@ -151,6 +151,44 @@ BEGIN {
   cnA["S01C12H3d\\."]          = "171,7,116";
 #  cnA["S1C12H4\\."]           = "171,171,63";
   cnA["S1C3H4-C\\."]           = "10,255,255";
+  cnA["del_A_pos_70-GREYR.2"]="212,113,0";
+  cnA["ref_A_pos_70-GREYR.2"]="14,138,30";
+  cnA["del_27bp-GREYR.4"]="87,42,212";
+  cnA["ref_27bp-GREYR.4"]="85,212,102";
+  cnA["del_T_pos_150-YELLOW2.4"]="106,134,212";
+  cnA["ref_T_pos_150-YELLOW2.4"]="83,138,119";
+  cnA["del_7bp-YELLOW2.4"]="148,165,212";
+  cnA["ref_7bp-YELLOW2.4"]="198,212,0";
+  cnA["del_TTCT_pos_175-YELLOWG.4"]="47,14,138";
+  cnA["ref_TTCT_pos_175-YELLOWG.4"]="212,42,155";
+  cnA["ref_TC_pos_62-YELLOW2.4"]="55,138,66";
+  cnA["del_A_pos_63-GREYB.5"]="69,87,138";
+  cnA["ref_A_pos_63-GREYB.5"]="127,195,212";
+  cnA["alt_pos_10_69-GREYB.5"]="165,148,212";
+  cnA["ref_pos_10_69-GREYB.5"]="85,212,0";
+  cnA["del_C_pos_159-GREYM.5"]="174,21,212";
+  cnA["ref_C_pos_159-GREYM.5"]="212,42,65";
+  cnA["del_14bp_pos_49_62-GREYZ.5"]="119,85,212";
+  cnA["ref_14bp_pos_49_62-GREYZ.5"]="87,69,138";
+  cnA["del_T_pos_135-YELLOW2.6"]="150,127,212";
+  cnA["del_CCT_pos_60_62-YELLOW1.6"]="107,96,138";
+  cnA["ref_CCT_pos_60_62-YELLOW1.6"]="0,212,141";
+  cnA["del_AC_pos_60-GREYR.7"]="113,14,138";
+  cnA["ref_AC_pos_60-GREYR.7"]="138,93,41";
+  cnA["del_T_pos_135-YELLOW2.9"]="121,55,138";
+  cnA["ref_T_pos_135-YELLOW2.9"]="134,106,212";
+  cnA["del_A_pos_140-GREYP.10"]="195,127,212";
+  cnA["ref_A_pos_140-GREYP.10"]="129,96,138";
+  cnA["del_T_pos_135_and_pos_163-YELLOW2.10"]="0,110,138";
+  cnA["ref_T_pos_135_and_pos_163-YELLOW2.10"]="138,14,96";
+  cnA["del_T_pos_99-YELLOW3.11"]="123,212,64";
+  cnA["ref_T_pos_99-YELLOW3.11"]="186,85,212";
+  cnA["ins_SPL_W3J_GATC_pos_54-YELLOW2.10"]="212,106,176";
+  cnA["ref_SPL_W3J_GATC_pos_54-YELLOW2.10"]="127,83,138";
+  cnA["del_SPL_W4F_CCT_pos_61-YELLOW2.6"]="199,148,212";
+  cnA["ref_SPL_W4F_CCT_pos_61-YELLOW2.6"]="0,56,212";
+  cnA["alt_SPL_W4D_ATTTA_pos_59-YELLOW2.4"]="138,14,30";
+  cnA["ref_SPL_W4D_CTTTTCC_pos_59-YELLOW2.4"]="64,212,162";
 }
 
 !/^#/ {
