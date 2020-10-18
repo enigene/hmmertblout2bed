@@ -215,15 +215,15 @@ BEGIN {
 
   if (coordsEnv) {
     if (strand == "+") {
-      print targetName description, envFrom, envTo, queryName, sprintf("%.1f",score), strand, envFrom, envTo, getColor(queryName, cnA);
+      print targetName " " description, envFrom, envTo, queryName, sprintf("%.1f",score), strand, envFrom, envTo, getColor(queryName, cnA);
     } else {
-      print targetName description, envTo, envFrom, queryName, sprintf("%.1f",score), strand, envTo, envFrom, getColor(queryName, cnA);
+      print targetName " " description, envTo, envFrom, queryName, sprintf("%.1f",score), strand, envTo, envFrom, getColor(queryName, cnA);
     }
   } else {
     if (strand == "+") {
-      print targetName description, aliFrom, aliTo, queryName, sprintf("%.1f",score), strand, aliFrom, aliTo, getColor(queryName, cnA);
+      print targetName " " description, aliFrom, aliTo, queryName, sprintf("%.1f",score), strand, aliFrom, aliTo, getColor(queryName, cnA);
     } else {
-      print targetName description, aliTo, aliFrom, queryName, sprintf("%.1f",score), strand, aliTo, aliFrom, getColor(queryName, cnA);
+      print targetName " " description, aliTo, aliFrom, queryName, sprintf("%.1f",score), strand, aliTo, aliFrom, getColor(queryName, cnA);
     }
   }
 }
