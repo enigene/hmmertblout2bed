@@ -200,7 +200,8 @@ BEGIN {
   envTo     = $10;
   strand    = $12;
   score     = $14;
-  description ? descripton = " " $16 : description = "";
+  description = $16;
+  (description != "-" || description == "") ? descripton = " " $16 : description = "";
 
 # skip SF monomers
   if ((skipsf)&&(length(queryName) == 2)) { next }
